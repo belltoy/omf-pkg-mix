@@ -10,7 +10,7 @@ end
 
 # fish completion for mix
 function __fish_mix_tasks
-    mix help ^/dev/null | awk '{
+    mix help 2>/dev/null | awk '{
         if ($1 == "mix") {
             if ($3 == "#") {
                 print $2"\t"substr($0, index($0, $4))
